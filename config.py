@@ -32,7 +32,7 @@ class ProdConfig(Config):
     Args:
         Config: The parent configuration class with General configuration settings
     '''
-    # SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:just@localhost/beem'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:just@localhost/beem'
     uri = os.getenv('DATABASE_URL')
     if uri and uri.startswith('postgres://'):
      uri = uri.replace('postgres://', 'postgresql://', 1)
